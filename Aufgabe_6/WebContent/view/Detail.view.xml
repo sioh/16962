@@ -1,0 +1,40 @@
+<mvc:View 
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="de.integrata.training.16961.lesson.2.controller.Detail">
+	<Page title="{model: 'i18n', path: 'customerDetailTitle'}">
+		<Table items="{
+			model: 'daten',
+			path: 'Flugbuchungen'
+		}">
+			<columns>
+				<Column>
+					<header>
+						<Text class="italicLabels" text="{model: 'i18n', path: 'columnAirline'}"/>
+					</header>
+				</Column>
+				<Column>
+					<header>
+						<Text text="{model: 'i18n', path: 'columnBookid'}"/>
+					</header>
+				</Column>
+				<Column>
+					<header>
+						<Text text="{model: 'i18n', path: 'columnFlightdate'}"/>
+					</header>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<Text text="{model: 'daten', path: 'Carrid'} {daten>Connid}"/>
+						<Text text="{model: 'daten', path: 'Bookid'}"/>
+						<Text text="{model: 'daten', path: 'Fldate',
+							type: 'sap.ui.model.type.Date', 
+							formatOptions: {style: 'long'}}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>

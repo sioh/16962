@@ -1,0 +1,6 @@
+<mvc:View 
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="de.integrata.training.16961.lesson.2.controller.SplitApp">
+	<SplitApp id="idSplitApp" />
+</mvc:View>

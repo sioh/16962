@@ -1,0 +1,35 @@
+<mvc:View 
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="de.integrata.training.16961.lesson.2.controller.Master">
+	<Page title="{model: 'i18n', path: 'customerListTitle'}">
+		<content>
+			<List items="{
+				model: 'daten',
+				path: '/FlugkundeSet'
+			}"
+			growing="true"
+			growingScrollToLoad="true">
+				<items>
+					<ObjectListItem title="{model: 'daten', path: 'Custname'}"
+						type="Active" press="onCustomerPress">
+						<attributes>
+							<ObjectAttribute title="Anrede" 
+								text="{model: 'daten', path: 'Form'}"
+								visible="{= ${daten>Form}.length === 0 ? false : true}"/>
+							<ObjectAttribute title="Wohnort" 
+								text="{model: 'daten', path: 'City'}"/>
+						</attributes>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button icon="sap-icon://add" press="onAddCustomerPress"/>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

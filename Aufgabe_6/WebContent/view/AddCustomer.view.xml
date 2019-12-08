@@ -1,0 +1,54 @@
+<mvc:View 
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.ui.layout.form"
+	controllerName="de.integrata.training.16961.lesson.2.controller.AddCustomer">
+	<Page title="{model: 'i18n', path: 'addCustomerPageTitle'}">
+		<content>
+			<f:SimpleForm
+				editable="true"
+				layout="ResponsiveGridLayout"
+				labelSpanXL="3"
+				labelSpanL="3"
+				labelSpanM="3"
+				labelSpanS="12"
+				adjustLabelSpan="false"
+				emptySpanXL="4"
+				emptySpanL="4"
+				emptySpanM="4"
+				emptySpanS="0"
+				columnsXL="1"
+				columnsL="1"
+				columnsM="1"
+				singleContainerFullSize="false">
+				<f:content>
+					<Label class="italicLabels" text="{model: 'i18n', path: 'lblCustomerForm'}" />
+					<Input value="{model: 'daten', path: 'Form'}" />
+					<Label class="italicLabels" text="{model: 'i18n', path: 'lblCustomerName'}" />
+					<Input value="{model: 'daten', path: 'Custname'}" />
+					<Label text="{model: 'i18n', path: 'lblCustomerStreet'}" />
+					<Input value="{model: 'daten', path: 'Street'}" />
+					<Label text="{model: 'i18n', path: 'lblCustomerPostbox'}" />
+					<Input value="{model: 'daten', path: 'Pobox'}" />
+					<Label text="{model: 'i18n', path: 'lblCustomerPostcode'}" />
+					<Input value="{model: 'daten', path: 'Postcode'}" />
+					<Label text="{model: 'i18n', path: 'lblCustomerCity'}" />
+					<Input value="{model: 'daten', path: 'City'}" />
+					<Label text="{model: 'i18n', path: 'lblCustomerCountry'}" />
+					<Input value="{model: 'daten', path: 'Countr'}" />
+					<Label text="{model: 'i18n', path: 'lblCustomerPhone'}" />
+					<Input value="{model: 'daten', path: 'Phone'}" />
+					<Label text="{model: 'i18n', path: 'lblCustomerEmail'}" />
+					<Input value="{model: 'daten', path: 'Email'}" />
+				</f:content>
+			</f:SimpleForm>	
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button text="{model: 'i18n', path: 'Save'}" type="Emphasized" press="onNewCustomerSave"/>
+				<Button text="{model: 'i18n', path: 'Cancel'}" press="onNewCustomerCancel"/>
+			</Toolbar>
+		</footer>
+	</Page>	
+</mvc:View>

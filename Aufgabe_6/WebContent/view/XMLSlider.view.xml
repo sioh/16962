@@ -1,0 +1,21 @@
+<mvc:View 
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="de.integrata.training.16961.lesson.2.controller.XMLSlider">
+	<Page title="{model: 'i18n', path: 'pageTitle'}">
+		<content>
+			<Slider width="300px" value="{model: 'dataModel', path: '/sliders/value1'}"/>
+			<Text id="idText1" text="{model: 'dataModel', path: '/sliders/value1'}"/>
+			<Slider value="{model: 'dataModel', path: '/sliders/value2'}"/>
+			<Input value="{model: 'dataModel', path: '/sliders/value2', type: 'sap.ui.model.type.Integer'}"
+					type="Number"/>
+		</content>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button icon="sap-icon://cancel" text="Abbrechen" type="Reject"/>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>
