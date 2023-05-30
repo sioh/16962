@@ -79,7 +79,7 @@
       "routes": [
         {
           "name": "RouteXMLSlider",
-          "pattern": ":?query:",
+          "pattern": "",
           "target": [
             "TargetXMLSlider"
           ]
