@@ -1,0 +1,117 @@
+{
+  "_version": "1.48.0",
+  "sap.app": {
+    "id": "de.integrata.training.16961.lesson.4",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.9.7",
+      "toolsId": "37105cbc-e67e-4d0f-a599-8c726f0205a8"
+    },
+    "dataSources": {
+        "mainService": {
+        "uri": "model/bapicusdat.xml",
+        "type": "XML",
+        "settings": {}
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.108.16",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "de.integrata.training.16961.lesson.4.i18n.i18n"
+        }
+      },
+			"dataModel": {
+				"dataSource": "mainService",
+				"preload": true,
+				"settings": {}
+			}
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "de.integrata.training.16961.lesson.4.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteXMLSlider",
+          "pattern": ":?query:",
+          "target": [
+            "CustomerTable"
+          ]
+        }
+      ],
+      "targets": {
+        "CustomerTable": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "XMLSCustomerTablelider",
+          "viewName": "CustomerTable"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "de.integrata.training.16961.lesson.4.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}
