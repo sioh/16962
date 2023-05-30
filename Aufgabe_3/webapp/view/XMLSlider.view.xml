@@ -1,0 +1,14 @@
+<mvc:View controllerName="de.integrata.training.16961.lesson.3.controller.XMLSlider"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Slider width="300px" change="onSlideChanged" value="{
+                model: 'sliderModel',
+                path: '/sliderValue'
+            }">
+            </Slider>
+        </content>
+    </Page>
+    
+</mvc:View>
