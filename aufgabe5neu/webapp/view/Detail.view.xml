@@ -1,0 +1,21 @@
+<mvc:View
+    controllerName="de.integrata.training.five.aufgabe5.controller.Detail"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
+>
+    <Page>
+        <content>
+            <form:SimpleForm>
+                <form:content>
+                    <Label text="Name" />
+                    <Text text="{Custname}" />
+                    <Label text="Strasse" />
+                    <Text text="{Street}" />
+                </form:content>
+            </form:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

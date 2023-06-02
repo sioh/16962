@@ -1,0 +1,13 @@
+<mvc:View controllerName="de.integrata.training.five.aufgabe5.controller.Master"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <List items="{/FlugkundeSet}" growing="true" growingScrollToLoad="true" growingThreshold="50">
+                <items>
+                    <StandardListItem title="{Custname}" type="Active" press="onCustomerPress"/>
+                </items>            
+            </List>
+        </content>
+    </Page>
+</mvc:View>
