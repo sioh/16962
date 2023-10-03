@@ -11,7 +11,7 @@
   "main": "webapp/index.html",
   "dependencies": {},
   "devDependencies": {
-    "@ui5/cli": "^3.3.3",
+    "@ui5/cli": "^3.4.0",
     "@sap/ux-ui5-tooling": "^1.10.3",
     "@sap-ux/ui5-middleware-fe-mockserver": "2"
   },
