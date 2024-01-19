@@ -2,10 +2,6 @@
 
 specVersion: "2.6"
 metadata:
-    name: # yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
-
-specVersion: "2.6"
-metadata:
     name: de.integrata.training.lesson.five.aufgabe5
 type: application
 builder:
