@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.6"
+metadata:
+    name: # yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.6"
+metadata:
+    name: de.integrata.training.lesson.five.aufgabe5
+type: application
+builder:
+    resources:
+        excludes:
+            - /test/**
+            - /localService/**
+    customTasks:
+        - name: deploy-to-abap
+          afterTask: generateCachebusterInfo
+          configuration:
+              target:
+                  url: http://vhcals4hcs.dummy.nodomain:8000
+                  client: "820"
+              app:
+                  name: ZFLIGHT_SH
+                  description: Silvios Flugkunden
+                  package: $tmp
+                  transport: ""
+              exclude:
+                  - /test/
+
+type: application
+builder:
+    resources:
+        excludes:
+            - /test/**
+            - /localService/**
+    customTasks:
+        - name: deploy-to-abap
+          afterTask: generateCachebusterInfo
+          configuration:
+              target:
+                  url: https://ic-sap-icd.icontec.de:8443
+                  client: "100"
+              app:
+                  name: ZSHFONTT
+                  description: Test Schriftartenersetzung
+                  package: $tmp
+                  transport: ""
+              exclude:
+                  - /test/
